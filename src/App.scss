@@ -1,0 +1,66 @@
+// #root {
+// 	display: flex;
+// 	align-items: center;
+// 	height: 100%;
+// }
+
+$sm: 576px;
+
+.App {
+	margin: 50px auto;
+	padding: 15px;
+	display: flex;
+	width: 297px;
+	max-width: 600px;
+	justify-content: space-around;
+	flex-direction: column;
+
+	@media (min-width: $sm) {
+		flex-direction: row;
+		width: 100%;
+	}
+}
+
+.content {
+	@media (min-width: $sm) {
+		margin-left: 50px;
+	}
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+
+	&__label {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 1em;
+
+		p {
+			margin: 0;
+			width: 100px;
+		}
+
+		input,
+		select {
+			margin-left: 20px;
+		}
+	}
+
+	&__input-expiry {
+		width: 50px;
+		margin-right: auto;
+	}
+
+	&__select {
+		flex-grow: 1;
+	}
+}
+
+.text-blue {
+	color: blue;
+}
+
+.text-red {
+	color: red;
+}
